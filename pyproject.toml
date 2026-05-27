@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "splunkguard-mcp"
+version = "0.1.0"
+description = "Gemini-driven agent that drives the official Splunk MCP Server (Splunkbase App #7931) to answer natural-language questions about Splunk data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "John Lee", email = "64lamei@gmail.com" },
+]
+keywords = [
+    "splunk",
+    "mcp",
+    "model-context-protocol",
+    "gemini",
+    "observability",
+    "agent",
+    "splunkbase-7931",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "google-genai>=0.8.0",
+    "mcp>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/64johnlee/splunkguard-mcp"
+Repository = "https://github.com/64johnlee/splunkguard-mcp"
+Issues = "https://github.com/64johnlee/splunkguard-mcp/issues"
+"Splunkbase App #7931" = "https://splunkbase.splunk.com/app/7931"
+
+[project.scripts]
+splunkguard-mcp = "splunkguard_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/splunkguard_mcp"]
