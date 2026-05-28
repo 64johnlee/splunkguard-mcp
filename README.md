@@ -1,6 +1,7 @@
 # splunkguard-mcp
 
-[![PyPI](https://img.shields.io/badge/pypi-coming%20soon-lightgrey)](https://pypi.org/project/splunkguard-mcp/)
+[![PyPI version](https://img.shields.io/pypi/v/splunkguard-mcp.svg)](https://pypi.org/project/splunkguard-mcp/)
+[![Python versions](https://img.shields.io/pypi/pyversions/splunkguard-mcp.svg)](https://pypi.org/project/splunkguard-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Splunkbase #7931](https://img.shields.io/badge/Splunkbase-%237931-orange)](https://splunkbase.splunk.com/app/7931)
 
@@ -27,8 +28,7 @@ This library handles both correctly out of the box.
 ## Install
 
 ```bash
-pip install splunkguard-mcp        # once published; for now:
-pip install git+https://github.com/64johnlee/splunkguard-mcp
+pip install splunkguard-mcp
 ```
 
 Python ≥ 3.10. Pulls `google-genai`, `mcp`, and `httpx` as deps.
